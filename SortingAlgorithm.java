@@ -56,18 +56,18 @@ public class SortingAlgorithm extends JPanel {
             // final float luminance = 1.0f; //1.0 for brighter, 0.0 for black
 
             // g2d.setColor(Color.getHSBColor(hue, saturation, luminance));
-            bar = new Rectangle2D.Float(i * BAR_WIDTH, 0, BAR_WIDTH-1, bar_height[i]);
+            bar = new Rectangle2D.Float(i * BAR_WIDTH, HEIGHT-bar_height[i], BAR_WIDTH-1, bar_height[i]);
             g2d.fill(bar); // g2d.draw(bar);
         }
 
         // Color setter for the current object
         g2d.setColor(Color.RED);
-        bar = new Rectangle2D.Float(current_index * BAR_WIDTH, 0, BAR_WIDTH, bar_height[current_index]);
+        bar = new Rectangle2D.Float(current_index * BAR_WIDTH, HEIGHT-bar_height[current_index], BAR_WIDTH, bar_height[current_index]);
         g2d.fill(bar);
 
         // Color setter for the traversing object
         g2d.setColor(Color.YELLOW);
-        bar = new Rectangle2D.Float(traversing_index * BAR_WIDTH, 0, BAR_WIDTH, bar_height[traversing_index]);
+        bar = new Rectangle2D.Float(traversing_index * BAR_WIDTH, HEIGHT-bar_height[traversing_index], BAR_WIDTH, bar_height[traversing_index]);
         g2d.fill(bar);
     }
 
@@ -84,7 +84,7 @@ public class SortingAlgorithm extends JPanel {
                         swap(traversing_index, traversing_index - 1);
                         traversing_index--;
                         
-                        Thread.sleep(10); // controls the speed
+                        Thread.sleep(1000); // controls the speed
                         repaint(); // we need it because we ofter replace the contents of a JPanel
                     }
                 }
@@ -107,7 +107,7 @@ public class SortingAlgorithm extends JPanel {
                             swap(traversing_index, traversing_index - 1);
                             traversing_index--; // just for annimation
 
-                            Thread.sleep(10); // controls the speed
+                            Thread.sleep(1000); // controls the speed
                             repaint(); // we need it because we ofter replace the contents of a JPanel
                         }
                     }   
@@ -134,7 +134,7 @@ public class SortingAlgorithm extends JPanel {
                             swap(traversing_index, traversing_index - 1);
                             traversing_index--; // just for annimation
 
-                            Thread.sleep(10); // controls the speed
+                            Thread.sleep(1000); // controls the speed
                             repaint(); // we need it because we ofter replace the contents of a JPanel
                         }
                     }   
@@ -164,7 +164,7 @@ public class SortingAlgorithm extends JPanel {
                         }
                     }
                     swap(current_index, min_index);
-                    Thread.sleep(10); // controls the speed
+                    Thread.sleep(1000); // controls the speed
                     repaint(); // we need it because we ofter replace the contents of a JPanel
                 } 
  
