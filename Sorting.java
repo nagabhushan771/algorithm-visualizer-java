@@ -21,7 +21,7 @@ public class Sorting extends Main {
     // Progress Bar
     JProgressBar jb1;
 
-    JSlider slider = new JSlider(0, 100, 2);
+    JSlider slider = new JSlider(0, 100, 100);
 
     public Sorting(){
         // Panel for options (bubble sort, insertion sort...)
